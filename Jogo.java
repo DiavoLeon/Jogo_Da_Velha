@@ -39,11 +39,11 @@ public class Jogo {
 	        do{
 	            System.out.println("1. Humano");
 	            System.out.println("2. Computador\n");
-	            System.out.print("OpÁ„o: ");
+	            System.out.print("Op√ß√£o: ");
 	            opcao = entrada.nextInt();
 	            
 	            if(opcao != 1 && opcao != 2)
-	                System.out.println("OpÁ„o inv·lida! Tente novamente");
+	                System.out.println("Op√ß√£o inv√°lida! Tente novamente");
 	        }while(opcao != 1 && opcao != 2);
 	        
 	        return opcao;
@@ -53,7 +53,7 @@ public class Jogo {
 	        if(ganhou() == 0 ){
 	            System.out.println("----------------------");
 	            System.out.println("\nRodada "+rodada);
-	            System.out.println("… a vez do jogador " + vez() );
+	            System.out.println("√â a vez do jogador " + vez() );
 	            
 	            if(vez()==1)
 	                jogador1.jogar(tabuleiro);
@@ -62,7 +62,7 @@ public class Jogo {
 	            
 	            
 	            if(tabuleiro.tabuleiroCompleto()){
-	                System.out.println("Tabuleiro Completo. Jogo empatado");
+	                System.out.println("Tabuleiro Completo. Deu Velha!");
 	                return false;
 	            }
 	            vez++;
@@ -71,9 +71,9 @@ public class Jogo {
 	            return true;
 	        } else{
 	            if(ganhou() == -1 )
-	                System.out.println("Jogador 1 ganhou!");
+	                System.out.println("Vit√≥ria do Jogador 1!");
 	            else
-	                System.out.println("Jogador 2 ganhou!");
+	                System.out.println("Vit√≥ria do Jogador 2!");
 	            
 	            return false;
 	        }
